@@ -6,7 +6,7 @@ VT.AppCollapsible = function (el) {
     show: true,
   };
 
-  el.querySelector('.bar > .toggle').addEventListener('click', function () {
+  el.querySelector(".bar > .toggle").addEventListener("click", function () {
     update({ show: !state.show });
   });
 
@@ -17,13 +17,13 @@ VT.AppCollapsible = function (el) {
   function update(next) {
     Object.assign(state, next);
 
-    el.querySelector('.bar > .toggle > .app-icon').classList.toggle(
-      '-r180',
-      state.show
+    el.querySelector(".bar > .toggle > .app-icon").classList.toggle(
+      "-r180",
+      state.show,
     );
 
-    el.querySelectorAll('.body').forEach(function (el) {
-      el.style.height = state.show ? el.children[0].offsetHeight + 'px' : '0';
+    el.querySelectorAll(".body").forEach(function (el) {
+      el.style.height = state.show ? el.children[0].offsetHeight + "px" : "0";
     });
   }
 };
